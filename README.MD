@@ -105,13 +105,43 @@ We can use a `where clause` to add a filter to our select statements. The differ
 
 `>` - Greater than.
 
+```sql
+SELECT *
+FROM racers
+WHERE id > 2
+```
+
 `<` - Less than.
+
+```sql
+SELECT *
+FROM racers
+WHERE id < 2
+```
 
 `>=` - Greater than or equal to.
 
+```sql
+SELECT *
+FROM racers
+WHERE id >= 2
+```
+
 `<=` - Less than or equal to.
 
+```sql
+SELECT *
+FROM racers
+WHERE id <= 2
+```
+
 `!=` - Does not equate.
+
+```sql
+SELECT *
+FROM racers
+WHERE id != 2
+```
 
 ##### Logical Operators
 
@@ -166,4 +196,24 @@ LIMIT 2
 ```
 
 This would return the first two rows of data from the racers table.
+
+#### ORDER BY
+
+`ORDER BY` - This clause will sort the records in our result. This clause can only be used in select statements.
+
+```sql
+SELECT *
+FROM racers
+ORDER BY id ASC
+```
+
+This will organize how result in ascending order by default.
+
+##### ASC
+
+`ASC` is the keyword we can use with order by to sort our records in the result in ascending order.
+
+##### DESC
+
+`DESC` is the keyword we can use with order by to sort our records in the result in descending order.
 
