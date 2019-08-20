@@ -99,7 +99,13 @@ Above, we delcare it's a select statement using the `SELECT` keyword. It is foll
 
 #### WHERE
 
-We can use a `where clause` to add a filter to our select statements. The different types of ways to filter data with a where clause.
+We can use a `where clause` to add a filter to our select statements.
+
+```sql
+SELECT *
+FROM racers
+WHERE name = 'Tayte'
+```
 
 ##### Comparison Operators
 
@@ -147,13 +153,39 @@ WHERE id != 2
 
 `AND` - Check for multiple conditions to be true.
 
+```sql
+SELECT *
+FROM racers
+WHERE id != 2
+AND id < 3
+```
+
 `OR` - Check for only one of multiple conditions to be true.
+
+```sql
+SELECT *
+FROM racers
+WHERE name = 'Tayte'
+OR id = 2
+```
 
 ##### Null and Not Null
 
 `IS NULL` - Checks for a value to be null.
 
+```sql
+SELECT *
+FROM racers
+WHERE name IS NULL
+```
+
 `IS NOT NULL` - Checks for a value NOT to be null.
+
+```sql
+SELECT *
+FROM racers
+WHERE name IS NOT NULL
+```
 
 ##### IN Condition
 
@@ -204,7 +236,7 @@ This would return the first two rows of data from the racers table.
 ```sql
 SELECT *
 FROM racers
-ORDER BY id ASC
+ORDER BY id
 ```
 
 This will organize how result in ascending order by default.
@@ -213,7 +245,69 @@ This will organize how result in ascending order by default.
 
 `ASC` is the keyword we can use with order by to sort our records in the result in ascending order.
 
+
+```sql
+SELECT *
+FROM racers
+ORDER BY id ASC
+```
+
 ##### DESC
 
 `DESC` is the keyword we can use with order by to sort our records in the result in descending order.
 
+
+```sql
+SELECT *
+FROM racers
+ORDER BY id DESC
+```
+
+### SQL Functions
+
+There are "functions" that we can use with PostgreSQL. This will usually handle some sort of mathematical logic for us.
+
+`count()` - This returns the count of an expression.
+
+```sql
+SELECT count(id)
+FROM racers
+```
+
+> It's important to note that count does not count null values. Pass in the `*` to account for all rows.
+
+`min()` - This returns the minimum value of an expression.
+
+```sql
+SELECT min(age)
+FROM racers
+```
+
+Above, we are finding the youngest racer.
+
+`max()` - This returns the maximum value of an expression.
+
+```sql
+SELECT max(age)
+FROM racers
+```
+
+Above, we are returning the oldest racer.
+
+`sum()` - This returns the summed value of an expression.
+
+```sql
+SELECT sum(age)
+FROM racers
+```
+
+Above, we now have the sum of the ages for all the racers.
+
+`avg()` - This function returns the average value of an expression.
+
+```sql
+SELECT avg(age)
+FROM racers
+```
+
+Above, we have found the average age of the racers.
