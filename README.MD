@@ -311,3 +311,36 @@ FROM racers
 ```
 
 Above, we have found the average age of the racers.
+
+### Update Statements
+
+We can  update our data inside of a database by using an `update statement`.
+
+```sql
+UPDATE racers
+SET name = 'Chris'
+WHERE id = 2
+```
+
+Above, we have just updated the name for the user with the id of 2. We first use the `UPDATE` keyword followed by the name of the table we are updating. Then we `SET` the name to "Chris" where the user id equals 2.
+
+### Delete Statements
+
+We can remove or destroy data from our databased by using a `delete statement`.
+
+```sql
+DELETE FROM racers
+WHERE id = 2
+```
+
+We first use the `DELETE FROM` keyword, then declare the table to remove from. We then choose the id of the racer we want to remove.
+
+> Make sure to add the where clause or you would remove everything in the table!
+
+### Dropping A Table
+
+We can drop our tables, if we feel the need to remove them. Be careful doing this, because we can not restore tables that have been dropped. This could lead to a lot of problems, so just keep that in mind!
+
+```sql
+DROP TABLE racers
+```
