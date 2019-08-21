@@ -57,6 +57,10 @@ When setting up our schema we will determine what `data type` is allowed in our 
 
 `Varchar(n)` - This data type will allow you to determine how many characters are allowed.
 
+### Boolean Values
+
+`Boolean` - This data type is either true or false
+
 ## Statements
 
 SQL statements are queries that we make to our database.
