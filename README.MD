@@ -194,7 +194,7 @@ WHERE name IS NOT NULL
 ```sql
 SELECT *
 FROM racers
-WHERE ame IN ('Tayte', 'Samual', 'Kevin');
+WHERE name IN ('Tayte', 'Samual', 'Kevin');
 ```
 
 If we didn't use the `IN` key word, our statement would look like this
